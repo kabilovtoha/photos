@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "9f52d1cecf783808a96d8dcbe52e7b21551bf3d38177f9fd754ba3e5cad96fd8"
+            "sha256": "cad6648d5bb1de5fc9d1032acc3ada632da324a65a1a0f1c9d7333ce650c5618"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -30,6 +30,13 @@
                 "sha256:d4e96ac9b0c3a6d3f0caae2e4124e6055c5dcafde8e2f831ff194c104f0775a0"
             ],
             "version": "==4.9.0"
+        },
+        "certifi": {
+            "hashes": [
+                "sha256:1d987a998c75633c40847cc966fcf5904906c920a7f17ef374f5aa4282abd304",
+                "sha256:51fcb31174be6e6664c5f69e3e1691a2d72a1a12e90f872cbdb1567eb47b6519"
+            ],
+            "version": "==2020.4.5.1"
         },
         "django": {
             "hashes": [
@@ -94,6 +101,13 @@
             "index": "pypi",
             "version": "==4.0.2"
         },
+        "django-rest-elasticsearch": {
+            "hashes": [
+                "sha256:0dc3eb0272386cf9e6b430b9fef8812e5c3e32058de04407695ec0f9d5ed8ca3"
+            ],
+            "index": "pypi",
+            "version": "==0.4.2"
+        },
         "django-webpack-loader": {
             "hashes": [
                 "sha256:7a3c88201aa54481f9399465615cbe7b9aece8081496a6d0287b7cb8e232f447",
@@ -109,6 +123,21 @@
             ],
             "index": "pypi",
             "version": "==3.11.0"
+        },
+        "elasticsearch": {
+            "hashes": [
+                "sha256:35de81968b78a1c708178773ccca56422661fc6e00905b81f48af8e8a9a2a6ba",
+                "sha256:eae591811e9bd82845ea22db3e891c30cad3d0f3e5dfd79cee80708872e5f626"
+            ],
+            "version": "==7.7.0"
+        },
+        "elasticsearch-dsl": {
+            "hashes": [
+                "sha256:0eee35bdb10d7c1e5b6dd68d94da67e9c2e639c273c1c0c3f560e430b03dce45",
+                "sha256:4015c0d25a0a5df05cf50fe7f3464234c5b97f050c85697399d96d46b30e09a7"
+            ],
+            "index": "pypi",
+            "version": "==7.2.0"
         },
         "importlib-metadata": {
             "hashes": [
@@ -160,6 +189,13 @@
             "index": "pypi",
             "version": "==7.1.2"
         },
+        "python-dateutil": {
+            "hashes": [
+                "sha256:73ebfe9dbf22e832286dafa60473e4cd239f8592f699aa5adaf10050e6e1823c",
+                "sha256:75bb3f31ea686f1197762692a9ee6a7550b59fc6ca3a1f4b5d7e32fb98e2da2a"
+            ],
+            "version": "==2.8.1"
+        },
         "pytz": {
             "hashes": [
                 "sha256:a494d53b6d39c3c6e44c3bec237336e14305e4f29bbf800b599253057fbb79ed",
@@ -187,6 +223,13 @@
                 "sha256:e162203737712307dfe78860cc56c8da8a852ab2ee33750e33aeadf38d12c548"
             ],
             "version": "==0.3.1"
+        },
+        "urllib3": {
+            "hashes": [
+                "sha256:3018294ebefce6572a474f0604c2021e33b3fd8006ecd11d62107a5d2a963527",
+                "sha256:88206b0eb87e6d677d424843ac5209e3fb9d0190d0ee169599165ec25e9d9115"
+            ],
+            "version": "==1.25.9"
         },
         "zipp": {
             "hashes": [

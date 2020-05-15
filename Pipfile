@@ -17,6 +17,8 @@ django-filter = "*"
 django-webpack-loader = "*"
 django-imagekit = "*"
 django-environ = "*"
+django-rest-elasticsearch = "*"
+elasticsearch-dsl = "*"
 
 [requires]
 python_version = "3.6"

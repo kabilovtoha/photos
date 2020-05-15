@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 from rest_framework import serializers
+from rest_framework_elasticsearch.es_serializer import ElasticModelSerializer
 from . import models
+from .search_indexes import PhotoIndex
 from django.contrib.auth.models import User
 
 
@@ -34,3 +36,9 @@ class PhotoDetailSerializer(PhotoSerializer):
         fields = [
             'id', 'author', 'city', 'image', 'image_thumbnail', 'desc', 'is_published', 'created', 'username'
         ]
+
+class ElasticPhotoSerializer(ElasticModelSerializer):
+    class Meta:
+        model = models.Photo
+        es_model = PhotoIndex
+        fields = ('pk', 'city_id', 'created', 'is_published')

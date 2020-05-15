@@ -28,3 +28,4 @@ class PhotoViewSet(viewsets.ReadOnlyModelViewSet):
         queryset = super().get_queryset()
         queryset = queryset.filter(is_published=True)
         return queryset
+
