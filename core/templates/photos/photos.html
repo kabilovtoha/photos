@@ -1,4 +1,4 @@
-{% extends "base_vue.html" %}
+{% extends "base.html" %}
 {% load i18n %}
 
 {% block title %}{% trans "Photos" %}{% endblock %}
@@ -8,5 +8,54 @@
     <h1>{% trans 'Photos' %}</h1>
 
     {% csrf_token %}
-    <div id="app"></div>
+      <div>
+    {% if existsCities %}
+      <div class="mb-5" >
+        <h2>Выберите город</h2>
+        <div class="row">
+          {% for city in existsCities %}
+            <a href="/photo/city/{{ city.id }}/"
+              class="ml-3"
+            >
+              {{ city.name }}
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+    {% if activeCity %}
+      <div class="row mb-4" >
+        <h2>Фотографии города "{{ activeCity.name }}"</h2>
+      </div>
+    {% endif %}
+    <div class="row">
+      {% for photo in photoList %}
+      <div class="col-sm-12 col-md-6 col-lg-3 photo-bl">
+        <div class="photo-bl-inner">
+          <div class="img-bl">
+            <a
+              href="{{ photo.image.url }}"
+              class="fancybox"
+              data-fancybox="gallery"
+            >
+                <img src="{{ photo.image_thumbnail.url }}" alt="" >
+            </a>
+          </div>
+          <div class="photo-info mt-2 mb-1">
+            <div class="inf-item">
+              <em>Город:</em> <span>{{ photo.city.name }}</span>
+            </div>
+            <div class="inf-item">
+              <em>Автор:</em> <span>{{ photo.get_username }}</span>
+            </div>
+            <div class="inf-item">
+              <em>Дата:</em>
+              <span>{{ photo.created }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 {% endblock %}

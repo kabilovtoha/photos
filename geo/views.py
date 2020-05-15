@@ -16,6 +16,29 @@ class IndexView(TemplateView):
 class PhotoView(TemplateView):
     template_name = 'photos/photos.html'
 
+    def get(self, request, *args, **kwargs):
+        context = {}
+        city_id = kwargs.get('city_id')
+        if city_id:
+            photoList = models.Photo.objects.filter(is_published=True, city_id=city_id)
+        else:
+            photoList = models.Photo.objects.filter(is_published=True)
+
+        if photoList.count() > 5:
+            photoList = photoList[0:5]
+
+        filterparams = get_photos_filterparams(request)
+
+        context = {
+            'photoList': photoList,
+            'existsCities': filterparams.get('cities', [])
+        }
+
+        return render(request, self.template_name, context)
+
+
+
+
 class PhotoAddView(FormView):
     template_name = 'photos/add.html'
     form_class = PhotoForm
@@ -60,4 +83,4 @@ def get_photos_filterparams(request):
     data = get_data(sql_str)
 
     context['cities'] = data
-    return JsonResponse(context)
+    return context

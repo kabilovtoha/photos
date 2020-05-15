@@ -4,3 +4,21 @@
 .login-form {
   max-width: 30rem;
   margin: 0 auto; }
+
+  .photo-bl {
+    padding: 8px;
+  }
+  .photo-bl-inner {
+    padding: 6px;
+    border: 1px solid #b5b5b5;
+  }
+  .img-bl {
+    width: 100%;
+    overflow: hidden;
+  }
+  .img-bl img {
+    width: 100%;
+  }
+  .photo-info {
+    width: 100%;
+  }
