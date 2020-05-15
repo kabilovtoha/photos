@@ -8,10 +8,8 @@ npm install
 # for development
 npm run dev
 
-# for production
-npm run build
-
 python3 manage.py collectstatic
+python3 manage.py runserver
 
 ```
 #### Стартовые данные:
