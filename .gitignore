@@ -274,9 +274,6 @@ tags
 [Ss]cripts
 pyvenv.cfg
 pip-selfcheck.json
-.env
-.env_toha_only
-
 
 ### Project template
 
@@ -287,10 +284,10 @@ pip-selfcheck.json
 
 .idea/
 #*.sql
+static/
 /dump.sh
 /release.sh
 /update.sh
-/agent_studio/staticfiles/report.html
 /media_dump.sh
 /urls.txt
 /short_release.sh
