@@ -1,0 +1,12 @@
+{% extends "base_vue.html" %}
+{% load i18n %}
+
+{% block title %}{% trans "Photos" %}{% endblock %}
+
+{% block content %}
+
+    <h1>{% trans 'Photos' %}</h1>
+
+    {% csrf_token %}
+    <div id="app"></div>
+{% endblock %}

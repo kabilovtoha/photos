@@ -1,0 +1,18 @@
+{% load i18n %}
+
+<div class="collapse navbar-collapse" id="navbar-content">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="/photo/">{% trans 'Photos' %}</a></li>
+        {% if user.is_authenticated %}
+            <li class="nav-item"><a class="nav-link" href="/photo/add/">{% trans 'Add photo' %}</a></li>
+        {% endif %}
+    </ul>
+    <ul class="navbar-nav ml-auto">
+        {% if user.is_authenticated %}
+            <li class="nav-item mr-2"><span class="navbar-text">@{{ user }}</span></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">{% trans 'Log out' %}</a></li>
+        {% else %}
+            <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">{% trans 'Log in' %}</a></li>
+        {% endif %}
+    </ul>
+</div>
